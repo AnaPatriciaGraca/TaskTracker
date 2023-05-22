@@ -1,14 +1,19 @@
 //impt
 import PropTypes from 'prop-types'
+import Button from './Button'
 
-
+//rafce
 const Header = ({ title }) => {
-  return (
-    <header className='header'>
-        <h1>{title}</h1>
-        <button className='btn'>Add</button>
-    </header>
-  )
+    const onClick = (e) => {
+        console.log('Click')
+    }
+
+    return (
+        <header className='header'>
+            <h1>{title}</h1>
+            <Button color='green' text='Add' handleClick={onClick} />
+        </header>
+    )
 }
 
 // CSS in JS
